@@ -17,6 +17,7 @@ def compter_occurence (caractere, chaine):
 """
 test pour la question 1
 """
+
 chaine='bonjour'
 print(compter_occurence('k',chaine))
 
@@ -98,5 +99,47 @@ test question 5
 print(substituer_mot('bonjour','voiture','bonjour bonjour bonjour estelle'))
 
 """
-question 6
+question 7
 """
+
+
+def decaler(caractere, decalage):
+    nombre_caractere = ord(caractere)
+    decale_voulu = nombre_caractere + decalage
+    lettre_obtenu = chr(decale_voulu)
+    
+    return lettre_obtenu
+"""
+test question 7
+"""
+    
+print(decaler('a',5))    
+
+"""
+question 8
+"""
+def chiffrement_cesar(chaine,nombre):
+    message_codée = ''
+    decalage = nombre
+    for c in chaine :
+        lettre_obtenu= decaler(c,decalage)
+        message_codée= message_codée + lettre_obtenu
+    return message_codée
+"""
+test qustion 8
+"""
+
+print(chiffrement_cesar('ab cd',15))
+
+"""
+question 8.2
+"""
+
+ # def dechiffrement_cesar(chaine,nombre)
+
+"""
+question 9 
+"""
+
+def clé_cesar(message,nombre):
+    
