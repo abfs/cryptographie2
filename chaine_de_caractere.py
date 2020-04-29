@@ -20,7 +20,7 @@ test pour la question 1
 
 chaine='bonjour'
 print(compter_occurence('k',chaine))
-
+#%%
 """
 question 2
 """
@@ -45,9 +45,10 @@ test pour la question 2
 
 chaine='bonjour bonjour estelle bla'
 print(compter_mots(chaine))
+#%%
 
 """
-qeustion 3
+question 3
 """
 
 def compter_occurences_mot(mot, chaine):
@@ -62,7 +63,8 @@ test pour la question 3
 """
 
 print(compter_occurences_mot('bonjour',chaine))
-            
+
+#%%        
 """
 question 4
 """
@@ -76,6 +78,7 @@ def substituer():
     print(chaine)
 
 substituer()
+#%%
 
 """
 question 5
@@ -97,6 +100,7 @@ test question 5
 """
 
 print(substituer_mot('bonjour','voiture','bonjour bonjour bonjour estelle'))
+#%%
 
 """
 question 7
@@ -115,6 +119,7 @@ test question 7
     
 print(decaler('a',5))    
 
+#%%
 """
 question 8
 """
@@ -126,20 +131,8 @@ def chiffrement_cesar(chaine,nombre):
         message_codée= message_codée + lettre_obtenu
     return message_codée
 """
-test qustion 8
+test question 8 
 """
 
 print(chiffrement_cesar('ab cd',15))
 
-"""
-question 8.2
-"""
-
- # def dechiffrement_cesar(chaine,nombre)
-
-"""
-question 9 
-"""
-
-def clé_cesar(message,nombre):
-    
