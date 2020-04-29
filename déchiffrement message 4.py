@@ -12,6 +12,8 @@ with open('message4.txt', 'r', encoding="utf8") as f:
 def decaler(caractere, decalage):
     """
     fonction permettant de décaler une lettre avec une clé
+    entre : caractère et la clé
+    sortie : caractère crypté
     """
     
     nombre_caractere = ord(caractere)
@@ -24,7 +26,9 @@ def decaler(caractere, decalage):
 def frequence(texte):
     
     """
-    fonction permettant de classer dans un dictionnaire les lettres et leur nombres d'apparition dans le texte
+    fonction permettant de classer dans un dictionnaire les lettres et leur nombres d'apparition
+    entré : texte
+    sortie : dictionnaire avec les lettres utilisées et leurs fréquences 
     """
     
     dictionnaire_de_frequence = {}
@@ -41,7 +45,8 @@ def frequence(texte):
 def caractere_plus_frequent(texte):
     """
     comparaison des lettres du texte et leurs fréquence pour avoir la lettre la plus fréquente en sortie
-    
+    entre : texte
+     sortie : un caractère
     """
     global caractere_le
     dictionnaire = frequence(texte)
@@ -68,6 +73,8 @@ def decalage(chaine):
 def chiffrement_cesar(chaine,nombre):
     """
     fonction qui chiffre un texte avec la méthode de césar
+    entré : texte et la clé
+    sortie : texte crypté
     """
     message_codée = ''
     decalage = nombre
@@ -80,6 +87,8 @@ def chiffrement_cesar(chaine,nombre):
 def dechiffrement_de_cesar(chaine):
     """
     fonction qui dechiffre un texte à partir d'un texte crypté
+    entré : texte crypté
+    sortie : texte decrypté
     """
     cle = decalage(chaine)
     texte = chiffrement_cesar(chaine,cle)
@@ -91,6 +100,8 @@ def déchiffrement_message4(message):
     """
     fonction permettant de déchiffrer le message avec une partie qui permet de séparer les lettres en positions paires
     et impaires
+    entre : le texte
+    sortie : le texte decrpyté
     """
     message_decrypté =''
     message_paire =''
