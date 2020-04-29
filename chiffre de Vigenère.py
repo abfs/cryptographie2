@@ -5,28 +5,19 @@ Created on Mon Apr  6 17:05:39 2020
 @author: etudiant
 """
 
-def decaler(caractere, decalage):
-    nombre_caractere = ord(caractere)
-    decale_voulu = nombre_caractere + decalage
-    lettre_obtenu = chr(decale_voulu)
-    
-    return lettre_obtenu
 
-"""
-def chiffrement_cesar(chaine,nombre):
-    message_codée = ''
-    decalage = nombre
-    for c in chaine :
-        lettre_obtenu= decaler(c,decalage)
-        message_codée= message_codée + lettre_obtenu
-    return message_codée
-"""
+
+
 
 """
 question 1 
 """
 
 def vigenere(message,cle):
+    """
+    fonction permettant de crypter un texte avec un chiffre de vigenere 
+    
+    """
     
     message_chiffré =''
     if len(message) == len(cle):
@@ -56,7 +47,10 @@ def vigenere(message,cle):
         
 print(vigenere('monmessa',[1,4,3]))
 
-
+#%%
+"""
+question 2
+"""
 def dechiffrement_vigenere(message,cle):
     
     message_dechiffre=''
@@ -87,7 +81,7 @@ def dechiffrement_vigenere(message,cle):
 
 print(dechiffrement_vigenere('nsqnivte',[1,4,3]))
 
-
+#%%
 """
 question 3
 """
@@ -105,6 +99,8 @@ def frequence(texte):
 
 print(frequence('bienvenue'))
 
+#%%
+
 """
 question 4
 """
@@ -113,23 +109,37 @@ question 4
 def caractere_plus_frequent(texte):
     
      dictionnaire = frequence(texte)
+     j=0
      for i in dictionnaire:
-         j =dictionnaire.values()
-         caractere_le_plus = j[0]
-         if j >= dictionnaire[i]:
-             caractere_le_plus=dictionnaire[i]
-         else:
-             break
-             
-             
+         if dictionnaire[i] >= j:
+             plusgrand = dictionnaire[i]
+             j= dictionnaire[i]
+             caractere_le_plus = i
+    
     
      return caractere_le_plus
 
 
-print(caractere_plus_frequent('anticonstitutionnellement'))
+print(caractere_plus_frequent("a b c dd"))
+
+#%%
+"""
+question 5
+"""
+
+def deviner_cle_cesar(message):
+    
+    le_caractere = caractere_plus_frequent(message)
+    decalage = ord(le_caractere)
+    espace = ord(' ')
+    cle_cesar=decalage-(2*decalage)
     
 
+    return cle_cesar
     
+
+print(deviner_cle_cesar("xq#phvvdjh#dyhf#ghv#hvsdfhv"))
+
 
     
     
